@@ -1,0 +1,31 @@
+@import 'utils/colors';
+@import 'utils/fonts';
+@import 'utils/buttons';
+@import 'utils/forms';
+
+html {
+  height: 100%;
+}
+body {
+  @extend .f-lora;
+  background-color: var(--dark);
+  color: var(--light);
+
+  overflow-x: hidden;
+  min-height: 100%;
+  display: flex;
+  > #__nuxt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1625px;
+  padding: 0 1rem;
+  margin: 0 auto 45px;
+}

@@ -1,0 +1,12 @@
+{
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true,
+  "editor.suggest.preview": true,
+  "html.autoClosingTags": true,
+  "files.exclude": {
+    "node_modules/": true
+  },
+  // "typescript.suggest.paths": false,
+}

@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "Run dev",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "dev"
+      ],
+    }
+  ]
+}
