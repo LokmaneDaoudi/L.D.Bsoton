@@ -1,20 +1,31 @@
 <template>
-  <div class="container mt-2">
+  <div class="container py-5">
     <div class="flex flex-column mx-auto" style="max-width: 1327px">
       <div class="flex book" v-for="book in books" :key="book.title">
-        <div class="f-alegreya f-bold md:f-61px op-60 text-vertical-up">
+        <div
+          class="
+            f-alegreya f-bold
+            md:f-61px
+            op-60
+            text-vertical-up
+            hidden
+            md:block
+          "
+        >
           {{ book.title }}
         </div>
-        <div class="flex book-card mx-2">
+        <div class="flex flex-column md:flex-row book-card md:mx-2">
           <img :src="book.cover" alt="" />
-          <div class="md:px-6 md:py-5">
+          <div class="md:px-6 md:py-5 mt-4 md:mt-0 text-center md:text-left">
             <h2 class="f-alegreya f-bold md:f-49px m-0 md:mb-3">
               {{ book.title }}
             </h2>
-            <span class="f-alegreya-sans md:f-24px op-80">
+            <div class="f-alegreya-sans md:f-24px op-80 mt-3 md:mt-0">
               {{ book.sub_title }}
-            </span>
-            <div class="flex mt-3">
+            </div>
+            <div
+              class="flex justify-content-center md:justify-content-start mt-3"
+            >
               <a
                 v-if="book.link_amazon"
                 :href="book.link_amazon"
@@ -32,7 +43,7 @@
                 Get Excerpt
               </a>
             </div>
-            <hr class="mt-5 mb-1 w-10" />
+            <hr class="mt-5 mb-1 w-10 mx-auto" />
             <p
               v-html="book.body"
               class="md:f-18px op-80"
@@ -40,7 +51,16 @@
             />
           </div>
         </div>
-        <div class="f-alegreya f-bold md:f-61px op-60 text-vertical-down">
+        <div
+          class="
+            f-alegreya f-bold
+            md:f-61px
+            op-60
+            text-vertical-down
+            hidden
+            md:block
+          "
+        >
           {{ book.sub_title_aside }}
         </div>
       </div>
@@ -51,6 +71,20 @@
 <style lang="scss" scoped>
 .book:not(:last-child) {
   margin-bottom: 40px;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: -20vw;
+      bottom: -10px;
+      width: 200vw;
+      height: 1px;
+      background-color: var(--light);
+      opacity: 0.3;
+    }
+  }
 }
 .book-card {
   background-color: var(--grey);
@@ -62,6 +96,20 @@
   }
   > div {
     width: 53%;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-color: unset;
+
+    > img {
+      width: 69%;
+      margin: 0 auto;
+      background-color: var(--grey);
+      padding: 8px;
+    }
+    > div {
+      width: unset;
+    }
   }
 }
 </style>

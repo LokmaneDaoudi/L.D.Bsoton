@@ -1,10 +1,17 @@
 <template>
   <div class="container">
-    <div class="row g-3 md:pt-6">
-      <div class="md:col-6">
-        <img src="/img/avatar.jpg" style="width: 100%" alt="" />
+    <div class="row g-3 py-3 md:pt-6">
+      <div class="col-12 md:col-6">
+        <div class="avatar-img box">
+          <img src="/img/avatar.jpg" class="box-content px-3 md:px-5" alt="" />
+        </div>
       </div>
-      <div class="md:col-6 md:f-24px text">
+      <div class="col-12 block md:hidden">
+        <h2 class="f-alegreya f-bold op-60 my-4 f-44px text-center">
+          WHO AM I?
+        </h2>
+      </div>
+      <div class="col-12 md:col-6 md:f-24px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the
@@ -32,7 +39,9 @@
         </p>
       </div>
     </div>
-    <div class="who f-alegreya f-bold op-60 text-vertical-down">WHO AM I?</div>
+    <div class="who f-alegreya f-bold op-60 text-vertical-down hidden md:block">
+      WHO AM I?
+    </div>
   </div>
 </template>
 
@@ -55,8 +64,13 @@
   }
 }
 
+.avatar-img {
+  img {
+    object-fit: cover;
+  }
+}
+
 .text {
-  max-width: 720px;
   > p {
     line-height: 31px;
     margin: 0;
@@ -79,9 +93,20 @@ body::before {
   background-color: var(--grey);
 
   transition: width 0.5s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    width: 100vw;
+    height: 0;
+  }
 }
 .about-me::before {
   width: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: 80vh;
+  }
 }
 </style>
 

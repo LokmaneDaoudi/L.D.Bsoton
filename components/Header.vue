@@ -2,7 +2,7 @@
 
 <template>
   <header>
-    <div class="container p-4 md:p-0 md:py-4 flex align-items-center">
+    <div class="container py-3 md:py-4 flex align-items-center">
       <div class="f-alegreya f-medium f-24px md:f-42px">L.D. Boston</div>
       <nav class="ml-auto nav-links" :class="{ show: sidebarShown }">
         <div class="mobile-nav head">
@@ -24,14 +24,16 @@
           <NuxtLink to="/books">Books</NuxtLink>
         </div>
       </nav>
-      <button class="mobile-nav toggle ml-auto" @click="toggleSidebar">&times;</button>
+      <button class="mobile-nav toggle ml-auto" @click="toggleSidebar">
+        &times;
+      </button>
     </div>
   </header>
 </template>
 
 <script lang="ts" setup>
 let sidebarShown = ref(false);
-let toggleSidebar = () => sidebarShown.value = !sidebarShown.value;
+let toggleSidebar = () => (sidebarShown.value = !sidebarShown.value);
 </script>
 
 <style lang="scss" scoped>
