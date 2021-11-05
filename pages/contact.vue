@@ -98,6 +98,11 @@ h1 {
   .input-container {
     font-size: 25px;
     font-family: 'AlegreyaSans', Arial, sans-serif;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+
     label {
       opacity: 0.3;
     }
