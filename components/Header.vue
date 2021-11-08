@@ -27,13 +27,13 @@
           </button>
         </div>
 
-        <div class="links">
+        <div class="links" style="position: relative">
           <NuxtLink to="/">Home</NuxtLink>
           <NuxtLink to="/about-me">About me</NuxtLink>
           <NuxtLink to="/books">Books</NuxtLink>
           <!-- <NuxtLink to="/blog">Blog</NuxtLink> -->
           <NuxtLink to="/contact">Contact</NuxtLink>
-          <div class="link-highlight"></div>
+          <div class="link-highlight" ref="linksHighlightEl"></div>
         </div>
 
         <div class="mobile-nav social">
@@ -99,6 +99,37 @@
 <script lang="ts" setup>
 let sidebarShown = ref(false);
 let toggleSidebar = () => (sidebarShown.value = !sidebarShown.value);
+
+const linksHighlightEl = ref<HTMLDivElement>(null);
+const router = useRouter();
+
+onMounted(() => {
+  router.afterEach(() => {
+    sidebarShown.value = false;
+    setLinksHighlight();
+  });
+  setLinksHighlight();
+});
+
+function setLinksHighlight() {
+  nextTick(() => {
+    let linksBox = document
+      .querySelector('header div.links')
+      .getBoundingClientRect();
+    let activeLinkBox = document
+      .querySelector('header .links a.router-link-active')
+      .getBoundingClientRect();
+
+    let left = activeLinkBox.left - linksBox.left;
+    let width = activeLinkBox.width;
+
+    left = left + 16 + width * 0.5;
+    width = width - 32 - width * 0.5;
+
+    linksHighlightEl.value.style.left = `${left}px`;
+    linksHighlightEl.value.style.width = `${width}px`;
+  });
+}
 </script>
 
 <style lang="scss" scoped>
@@ -109,14 +140,24 @@ let toggleSidebar = () => (sidebarShown.value = !sidebarShown.value);
     padding: 0.6rem 1rem;
     color: var(--white);
     font-size: 25px;
+
+    @media screen and (max-width: 768px) {
+      &.router-link-active {
+        color: var(--primary);
+      }
+    }
   }
   .link-highlight {
     position: absolute;
-    top: 82%;
+    top: 90%;
 
     height: 3px;
     border-radius: 4px;
     background-color: var(--primary);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
