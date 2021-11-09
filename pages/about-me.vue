@@ -56,7 +56,7 @@
   font-size: 85px;
 
   clip-path: inset(0 0 100% 0);
-  animation: grow 0.5s 0.5s ease-in-out forwards;
+  animation: grow 0.5s 0.8s ease-in-out forwards;
   @keyframes grow {
     to {
       clip-path: inset(0 0 0 0);

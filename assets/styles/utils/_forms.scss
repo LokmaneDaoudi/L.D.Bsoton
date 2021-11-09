@@ -1,7 +1,12 @@
 .input-container {
   --padding: 18px 13px;
-
   margin-top: 4rem;
+
+  @media screen and (max-width: 768px) {
+    --padding: 15px 10px;
+    margin-top: 3rem;
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;
