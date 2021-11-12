@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="row g-3 py-3 md:pt-6">
-      <div class="col-12 md:col-6">
+    <div class="row g-3 py-3 md:pt-4 xl:pt-6 relative">
+      <div class="col-12 md:col-6 align-self-center">
         <div class="avatar-img box">
-          <img src="/img/avatar.jpg" class="box-content px-3 md:px-5" alt="" />
+          <img src="/img/avatar.jpg" class="box-content px-3 xl:px-5" alt="" />
         </div>
       </div>
       <div class="col-12 block md:hidden">
@@ -11,7 +11,7 @@
           WHO AM I?
         </h2>
       </div>
-      <div class="col-12 md:col-6 md:f-24px text">
+      <div class="col-12 md:col-6 md:f-14px xl:f-24px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the
@@ -38,9 +38,9 @@
           hanging out with my friends.
         </p>
       </div>
-    </div>
-    <div class="who f-alegreya f-bold op-60 text-vertical-down hidden md:block">
-      WHO AM I?
+      <div class="who f-alegreya f-bold op-60 text-vertical-down">
+        WHO AM I?
+      </div>
     </div>
   </div>
 </template>
@@ -53,7 +53,6 @@
   overflow: hidden;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  font-size: 85px;
 
   clip-path: inset(0 0 100% 0);
   animation: grow 0.5s 0.8s ease-in-out forwards;
@@ -61,6 +60,16 @@
     to {
       clip-path: inset(0 0 0 0);
     }
+  }
+
+  font-size: 85px;
+  @media screen and (max-width: $xl) {
+    font-size: 60px;
+  }
+
+  display: none;
+  @media screen and (min-width: $md) {
+    display: block;
   }
 }
 
@@ -76,6 +85,13 @@
     margin: 0;
     &:not(:last-child) {
       margin-bottom: 31px;
+    }
+
+    @media screen and (max-width: $xl) {
+      line-height: 22px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
