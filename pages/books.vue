@@ -1,11 +1,12 @@
 <template>
-  <div class="container py-5">
+  <div class="container py-4 xl:py-5">
     <div class="flex flex-column mx-auto" style="max-width: 1327px">
       <div class="flex book" v-for="book in books" :key="book.title">
         <div
           class="
             f-alegreya f-bold
-            md:f-61px
+            md:f-40px
+            xl:f-61px
             op-60
             text-vertical-up
             hidden
@@ -16,11 +17,13 @@
         </div>
         <div class="flex flex-column md:flex-row book-card md:mx-2">
           <img :src="book.cover" alt="" />
-          <div class="md:px-6 md:py-5 mt-4 md:mt-0 text-center md:text-left">
-            <h2 class="f-alegreya f-bold md:f-49px m-0 md:mb-3">
+          <div
+            class="md:p-4 xl:px-6 xl:py-5 mt-4 md:mt-0 text-center md:text-left"
+          >
+            <h2 class="f-alegreya f-bold md:f-32px xl:f-49px m-0 md:mb-3">
               {{ book.title }}
             </h2>
-            <div class="f-alegreya-sans md:f-24px op-80 mt-3 md:mt-0">
+            <div class="f-alegreya-sans md:f-20px xl:f-24px op-80 mt-3 md:mt-0">
               {{ book.sub_title }}
             </div>
             <div
@@ -29,7 +32,7 @@
               <a
                 v-if="book.link_amazon"
                 :href="book.link_amazon"
-                class="btn btn-primary f-14px p-3 mr-4"
+                class="btn btn-primary f-12 xl:f-14px p-3 mr-4"
                 target="_blank"
               >
                 Buy on Amazon
@@ -37,24 +40,25 @@
               <a
                 v-if="book.link_excerpt"
                 :href="book.link_excerpt"
-                class="btn btn-primary f-14px p-3"
+                class="btn btn-primary f-12 xl:f-14px p-3"
                 target="_blank"
               >
                 Get Excerpt
               </a>
             </div>
-            <hr class="mt-5 mb-1 w-10 mx-auto" />
+            <hr class="mt-3 xl:mt-5 mb-1 w-10 mx-auto" />
             <p
               v-html="book.body"
-              class="md:f-18px op-80"
-              style="line-height: 23px"
+              class="f-16 md:f-14 xl:f-18px op-80"
+              style="line-height: 21px"
             />
           </div>
         </div>
         <div
           class="
             f-alegreya f-bold
-            md:f-61px
+            md:f-40px
+            xl:f-61px
             op-60
             text-vertical-down
             hidden
@@ -73,7 +77,7 @@
   margin-bottom: 40px;
   position: relative;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $md) {
     &::after {
       content: '';
       position: absolute;
@@ -98,7 +102,7 @@
     width: 53%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $md) {
     background-color: unset;
 
     > img {

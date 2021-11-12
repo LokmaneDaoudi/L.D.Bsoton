@@ -1,7 +1,7 @@
 <template>
-  <div class="container py-5">
-    <div class="row md:pt-3">
-      <div class="col-12 md:mb-5">
+  <div class="container py-4 xl:py-5">
+    <div class="row xl:pt-3">
+      <div class="col-12 md:mb-3 xl:mb-5">
         <h1 class="f-alegreya f-bold op-80 m-0">Let's get in touch</h1>
       </div>
       <div class="col-12 md:col-6">
@@ -39,7 +39,16 @@
             <label class="input-label">Message</label>
           </div>
 
-          <p class="f-alegreya f-14px md:f-25px op-30 text-center md:text-left">
+          <p
+            class="
+              f-alegreya f-14px
+              md:f-20px
+              xl:f-25px
+              op-30
+              text-center
+              md:text-left
+            "
+          >
             Set your mind at rest, we will not spam your inbox
           </p>
 
@@ -48,17 +57,36 @@
           </div>
         </form>
       </div>
-      <div class="col-12 md:col-6 info mt-6 md:mt-10 text-center md:text-left">
-        <h2 class="md:f-54px op-80">Additional Information</h2>
+      <div
+        class="
+          col-12
+          md:col-6
+          info
+          mt-6
+          md:mt-10
+          p-0
+          md:pl-4
+          xl:pl-0
+          text-center
+          md:text-left
+        "
+      >
+        <h2 class="md:f-35px xl:f-54px op-80">Additional Information</h2>
         <div class="mt-5">
-          <div class="f-30px md:f-39px op-60">Email</div>
-          <a class="f-27px md:f-35px mt-3" href="mailto:ldwrites@something.com">
+          <div class="f-28 md:f-30px xl:f-39px op-60">Email</div>
+          <a
+            class="f-27px md:f-28px xl:f-35px md:mt-2 xl:mt-3"
+            href="mailto:ldwrites@something.com"
+          >
             Ldwrites@something.com
           </a>
         </div>
         <div>
-          <div class="f-30px md:f-39px op-60">Phone</div>
-          <a class="f-27px md:f-35px mt-3" href="tel:+213248209360">
+          <div class="f-28 md:f-30px xl:f-39px op-60">Phone</div>
+          <a
+            class="f-27px md:f-28px xl:f-28px md:mt-2 xl:mt-3"
+            href="tel:+213248209360"
+          >
             +213 24 820 93 60
           </a>
         </div>
@@ -69,9 +97,13 @@
 
 <style lang="scss" scoped>
 h1 {
-  font-size: 227px;
-  @media screen and (max-width: 768px) {
-    font-size: 64px;
+  font-size: 45px;
+  @media screen and (min-width: $md) {
+    font-size: 123px;
+    line-height: 0.8;
+  }
+  @media screen and (min-width: $xl) {
+    font-size: 170px;
   }
 }
 .info {
@@ -96,11 +128,14 @@ h1 {
   max-width: 612px;
 
   .input-container {
-    font-size: 25px;
     font-family: 'AlegreyaSans', Arial, sans-serif;
 
-    @media screen and (max-width: 768px) {
-      font-size: 18px;
+    font-size: 18px;
+    @media screen and (min-width: $md) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: $xl) {
+      font-size: 25px;
     }
 
     label {
@@ -111,7 +146,13 @@ h1 {
 
 textarea {
   min-height: 100px;
-  height: 228px;
+  height: 150px;
+  @media screen and (min-width: $md) {
+    height: 180px;
+  }
+  @media screen and (min-width: $xl) {
+    height: 200px;
+  }
 }
 </style>
 

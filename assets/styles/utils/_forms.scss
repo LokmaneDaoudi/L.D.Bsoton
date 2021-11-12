@@ -1,9 +1,11 @@
 .input-container {
-  --padding: 18px 13px;
-  margin-top: 4rem;
+  --padding: 13px 11px;
+  --top-offset: -77%;
+  margin-top: 2.3rem;
 
-  @media screen and (max-width: 768px) {
-    --padding: 15px 10px;
+  @media screen and (min-width: $xl) {
+    --padding: 15px 13px;
+    --top-offset: -80%;
     margin-top: 3rem;
   }
 
@@ -38,7 +40,7 @@
 .input:focus + .input-label,
 .input:not(:placeholder-shown) + .input-label {
   opacity: 0.8 !important;
-  transform: translate(-0.5rem, -90%);
+  transform: translate(-0.5rem, var(--top-offset));
 }
 
 .input:focus + .input-label + .input-underline,
