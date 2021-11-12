@@ -37,7 +37,7 @@
           Learn more
         </NuxtLink>
       </div>
-      <div class="md:col-6 text-right xl:text-center order-0 md:order-1">
+      <div class="md:col-6 md:text-right order-0 md:order-1 xl:mt-3">
         <img src="/img/main.png" class="main-img" alt="lokman main picture" />
       </div>
     </div>
@@ -59,7 +59,7 @@ useMeta({
   max-width: 100%;
   width: 75%;
   @media screen and (max-width: $xl) {
-    width: 80%;
+    width: 90%;
   }
   @media screen and (max-width: $md) {
     width: unset;
