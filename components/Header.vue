@@ -2,8 +2,10 @@
 
 <template>
   <header>
-    <div class="container pb-3 pt-5 md:py-4 flex align-items-center">
-      <div class="f-alegreya f-medium f-24px md:f-42px">L.D. Boston</div>
+    <div class="container pb-3 pt-5 md:py-3 xl:py-4 flex align-items-center">
+      <div class="f-alegreya f-medium f-24px md:f-32px xl:f-42px">
+        L.D. Boston
+      </div>
       <nav class="ml-auto nav-links" :class="{ show: sidebarShown }">
         <div class="mobile-nav head">
           <span class="f-alegreya f-medium f-24px">L.D. Boston</span>
@@ -139,9 +141,13 @@ function setLinksHighlight() {
     display: inline-block;
     padding: 0.6rem 1rem;
     color: var(--white);
-    font-size: 25px;
+    font-size: 18px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: $xl) {
+      font-size: 23px;
+    }
+
+    @media screen and (max-width: $md) {
       &.router-link-active {
         color: var(--primary);
       }
@@ -155,7 +161,7 @@ function setLinksHighlight() {
     border-radius: 4px;
     background-color: var(--primary);
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $md) {
       display: none;
     }
   }
@@ -164,7 +170,7 @@ function setLinksHighlight() {
 .mobile-nav {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $md) {
   .nav-links {
     position: fixed;
     top: 0;
