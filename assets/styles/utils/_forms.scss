@@ -1,12 +1,12 @@
 .input-container {
-  --padding: 13px 11px;
-  --top-offset: -77%;
-  margin-top: 2.3rem;
+  --padding: 14px 12px;
+  --top-offset: -80%;
+  margin-top: 2.8rem;
 
-  @media screen and (min-width: $xl) {
-    --padding: 15px 13px;
-    --top-offset: -80%;
-    margin-top: 3rem;
+  @include media-breakpoint-down(xl) {
+    --padding: 10px 8px;
+    --top-offset: -77%;
+    margin-top: 1.8rem;
   }
 
   position: relative;

@@ -6,8 +6,11 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData:
-            '@import "@/assets/styles/primeflex/_variables.scss";',
+          additionalData: `
+            @import "@/assets/styles/primeflex/_variables.scss";
+            @import "@/assets/styles/primeflex/_functions.scss";
+            @import "@/assets/styles/primeflex/_mixins.scss";
+          `,
         },
       },
     },

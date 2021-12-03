@@ -2,7 +2,18 @@
 
 <template>
   <header>
-    <div class="container pb-3 pt-5 md:py-3 xl:py-4 flex align-items-center">
+    <div
+      class="
+        container
+        pb-3
+        pt-5
+        md:py-2
+        lg:py-3
+        xl:py-4
+        flex
+        align-items-center
+      "
+    >
       <div class="f-alegreya f-medium f-24px md:f-32px xl:f-42px">
         L.D. Boston
       </div>

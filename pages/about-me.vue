@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row g-3 py-3 md:pt-4 xl:pt-6 relative">
+    <div class="row g-3 py-3 md:pt-3 lg:pt-4 relative">
       <div class="col-12 md:col-6 align-self-center">
         <div class="avatar-img box">
           <img src="/img/avatar.jpg" class="box-content px-3 xl:px-5" alt="" />
@@ -11,7 +11,7 @@
           WHO AM I?
         </h2>
       </div>
-      <div class="col-12 md:col-6 md:f-14px xl:f-24px text">
+      <div class="col-12 md:col-6 f-16px md:f-12px lg:f-14px xl:f-20px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the
@@ -63,12 +63,15 @@
   }
 
   font-size: 85px;
-  @media screen and (max-width: $xl) {
+  @include media-breakpoint-down(xl) {
     font-size: 60px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 50px;
   }
 
   display: none;
-  @media screen and (min-width: $md) {
+  @include media-breakpoint-up(md) {
     display: block;
   }
 }
@@ -81,17 +84,30 @@
 
 .text {
   > p {
-    line-height: 31px;
     margin: 0;
+
     &:not(:last-child) {
       margin-bottom: 31px;
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 13px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 8px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 12px;
+      }
     }
 
-    @media screen and (max-width: $xl) {
+    line-height: 31px;
+    @include media-breakpoint-down(xl) {
       line-height: 22px;
-      &:not(:last-child) {
-        margin-bottom: 20px;
-      }
+    }
+    @include media-breakpoint-down(lg) {
+      line-height: 16px;
+    }
+    @include media-breakpoint-down(sm) {
+      line-height: unset;
     }
   }
 }
