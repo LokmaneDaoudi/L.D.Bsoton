@@ -42,8 +42,11 @@
           <p
             class="
               f-alegreya f-14px
-              md:f-18px
+              md:f-15px
+              lg:f-16px
               xl:f-22px
+              my-1
+              lg:my-2
               op-30
               text-center
               md:text-left
@@ -62,7 +65,8 @@
           col-12
           md:col-6
           info
-          mt-7
+          mt-6
+          xl:mt-7
           p-0
           md:pl-4
           xl:pl-0
@@ -96,14 +100,21 @@
 
 <style lang="scss" scoped>
 h1 {
-  font-size: 45px;
+  font-size: 170px;
+  line-height: 0.8;
 
-  @include media-breakpoint-up(md) {
-    font-size: 123px;
-    line-height: 0.8;
+  @include media-breakpoint-down(xl) {
+    font-size: 97px;
+    line-height: 0.6;
+    letter-spacing: 9px;
   }
-  @include media-breakpoint-up(xl) {
-    font-size: 170px;
+  @include media-breakpoint-down(lg) {
+    font-size: 111px;
+    line-height: 0.7;
+    letter-spacing: 3px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 45px;
   }
 }
 .info {
@@ -132,7 +143,10 @@ h1 {
 
     font-size: 16px;
     @include media-breakpoint-up(md) {
-      font-size: 18px;
+      font-size: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
     }
     @include media-breakpoint-up(xl) {
       font-size: 20px;
@@ -146,12 +160,15 @@ h1 {
 
 textarea {
   min-height: 100px;
-  height: 110px;
-  @include media-breakpoint-up(md) {
-    height: 140px;
+  height: 160px;
+  @include media-breakpoint-down(xl) {
+    height: 130px;
   }
-  @include media-breakpoint-up(xl) {
-    height: 160px;
+  @include media-breakpoint-down(lg) {
+    height: 120px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 110px;
   }
 }
 </style>

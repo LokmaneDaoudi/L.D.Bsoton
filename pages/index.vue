@@ -7,19 +7,20 @@
           order-1
           md:order-0
           text-center
-          md:text-left md:mt-4
+          md:text-left md:mt-2
+          lg:mt-4
           xl:mt-6
         "
       >
         <p class="f-alegreya f-28px md:f-35px xl:f-50px">Hello!</p>
-        <h1 class="f-alegreya my-0 f-44px md:f-6xl xl:f-7xl xl:my-4">
+        <h1 class="f-alegreya my-0 f-44px md:f-3xl lg:f-6xl xl:f-7xl xl:my-4">
           I am L.D. Boston
         </h1>
-        <p class="f-19 md:f-28px xl:f-32px">
+        <p class="f-19 md:f-22px lg:f-28px xl:f-32px">
           A novelist during daytime and
           <br />and a blogger at night.
         </p>
-        <p class="f-16 md:f-20px xl:f-26px xl:pt-4">
+        <p class="f-16 md:f-18px lg:f-20px xl:f-26px xl:pt-4">
           my life is dedicated to creating impactful stories and helping people
           making ones of their own.
         </p>
@@ -58,10 +59,13 @@ useMeta({
 .main-img {
   max-width: 100%;
   width: 75%;
-  @media screen and (max-width: $xl) {
+  @include media-breakpoint-down(xl) {
+    width: 80%;
+  }
+  @include media-breakpoint-down(lg) {
     width: 90%;
   }
-  @media screen and (max-width: $md) {
+  @include media-breakpoint-down(md) {
     width: unset;
   }
 }

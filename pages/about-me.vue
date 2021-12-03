@@ -11,7 +11,7 @@
           WHO AM I?
         </h2>
       </div>
-      <div class="col-12 md:col-6 f-14px md:f-12px xl:f-20px text">
+      <div class="col-12 md:col-6 f-14px md:f-12px lg:f-14px xl:f-20px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the
@@ -63,12 +63,15 @@
   }
 
   font-size: 85px;
-  @media screen and (max-width: $xl) {
+  @include media-breakpoint-down(xl) {
     font-size: 60px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 50px;
   }
 
   display: none;
-  @media screen and (min-width: $md) {
+  @include media-breakpoint-up(md) {
     display: block;
   }
 }
@@ -81,17 +84,18 @@
 
 .text {
   > p {
-    line-height: 31px;
     margin: 0;
+
     &:not(:last-child) {
       margin-bottom: 31px;
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 13px;
+      }
     }
 
-    @media screen and (max-width: $xl) {
+    line-height: 31px;
+    @include media-breakpoint-down(xl) {
       line-height: 22px;
-      &:not(:last-child) {
-        margin-bottom: 20px;
-      }
     }
   }
 }
