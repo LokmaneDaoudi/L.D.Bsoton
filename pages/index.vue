@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row py-5">
+    <div class="row md:py-4 lg:py-5">
       <div
         class="
           md:col-6
@@ -12,7 +12,9 @@
           xl:mt-6
         "
       >
-        <p class="f-alegreya f-28px md:f-35px xl:f-50px">Hello!</p>
+        <p class="f-alegreya f-28px md:f-35px xl:f-50px md:my-2 lg:my-3">
+          Hello!
+        </p>
         <h1 class="f-alegreya my-0 f-44px md:f-3xl lg:f-6xl xl:f-7xl xl:my-4">
           I am L.D. Boston
         </h1>
@@ -28,7 +30,8 @@
           class="
             btn btn-primary
             f-16px
-            md:f-20px
+            md:f-18px
+            lg:f-20px
             xl:f-24px xl:py-4 xl:px-7
             md:mt-3
             xl:mt-4

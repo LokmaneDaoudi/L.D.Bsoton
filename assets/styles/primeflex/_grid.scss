@@ -21,7 +21,7 @@
   padding-left: 0;
 }
 
-@media screen and (min-width: 768px) {
+@include media-breakpoint-down(xl) {
   .g-3 {
     margin-right: -5rem;
     margin-left: -5rem;
@@ -33,6 +33,20 @@
     padding-left: 5rem;
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .g-3 {
+    margin-right: -3.5rem;
+    margin-left: -3.5rem;
+  }
+
+  .g-3 > .col,
+  .g-3 > [class*='col-'] {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+  }
+}
+
 .col {
   flex-grow: 1;
   flex-basis: 0;

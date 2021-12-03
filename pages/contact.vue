@@ -74,20 +74,20 @@
           md:text-left
         "
       >
-        <h2 class="md:f-35px xl:f-54px op-80">Additional Information</h2>
+        <h2 class="f-25px lg:f-35px xl:f-54px op-80">Additional Information</h2>
         <div class="mt-5">
-          <div class="f-28 md:f-30px xl:f-39px op-60">Email</div>
+          <div class="f-28 lg:f-30px xl:f-39px op-60">Email</div>
           <a
-            class="f-27px md:f-28px xl:f-35px md:mt-2 xl:mt-3"
+            class="f-27px lg:f-28px xl:f-35px md:mt-2 xl:mt-3"
             href="mailto:ldwrites@something.com"
           >
             Ldwrites@something.com
           </a>
         </div>
         <div>
-          <div class="f-28 md:f-30px xl:f-39px op-60">Phone</div>
+          <div class="f-28 lg:f-30px xl:f-39px op-60">Phone</div>
           <a
-            class="f-27px md:f-28px xl:f-28px md:mt-2 xl:mt-3"
+            class="f-27px lg:f-28px xl:f-28px md:mt-2 xl:mt-3"
             href="tel:+213248209360"
           >
             +213 24 820 93 60
@@ -109,8 +109,8 @@ h1 {
     letter-spacing: 9px;
   }
   @include media-breakpoint-down(lg) {
-    font-size: 111px;
-    line-height: 0.7;
+    font-size: 77px;
+    line-height: 0.5;
     letter-spacing: 3px;
   }
   @include media-breakpoint-down(md) {
@@ -165,10 +165,10 @@ textarea {
     height: 130px;
   }
   @include media-breakpoint-down(lg) {
-    height: 120px;
+    height: 100px;
   }
   @include media-breakpoint-down(md) {
-    height: 110px;
+    height: 90px;
   }
 }
 </style>

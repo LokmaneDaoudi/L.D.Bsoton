@@ -1,16 +1,16 @@
 <template>
-  <div class="container py-4">
+  <div class="container py-3 lg:py-4">
     <div class="flex flex-column mx-auto" style="max-width: 1327px">
       <div class="flex book" v-for="book in books" :key="book.title">
         <div
           class="
             f-alegreya f-bold
-            md:f-40px
+            lg:f-40px
             xl:f-61px
             op-60
             text-vertical-up
             hidden
-            md:block
+            lg:block
           "
         >
           {{ book.title }}
@@ -49,7 +49,7 @@
             <hr class="mt-3 xl:mt-5 mb-1 w-10 mx-auto" />
             <p
               v-html="book.body"
-              class="f-16 md:f-14 xl:f-18px op-80"
+              class="f-16 md:f-12 lg:f-14 xl:f-18px op-80"
               style="line-height: 21px"
             />
           </div>
@@ -57,12 +57,12 @@
         <div
           class="
             f-alegreya f-bold
-            md:f-40px
+            lg:f-40px
             xl:f-61px
             op-60
             text-vertical-down
             hidden
-            md:block
+            lg:block
           "
         >
           {{ book.sub_title_aside }}

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row g-3 py-3 md:pt-4 relative">
+    <div class="row g-3 py-3 md:pt-3 lg:pt-4 relative">
       <div class="col-12 md:col-6 align-self-center">
         <div class="avatar-img box">
           <img src="/img/avatar.jpg" class="box-content px-3 xl:px-5" alt="" />
@@ -91,11 +91,17 @@
       @include media-breakpoint-down(xl) {
         margin-bottom: 13px;
       }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 8px;
+      }
     }
 
     line-height: 31px;
     @include media-breakpoint-down(xl) {
       line-height: 22px;
+    }
+    @include media-breakpoint-down(lg) {
+      line-height: 16px;
     }
   }
 }
