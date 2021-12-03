@@ -11,7 +11,7 @@
           WHO AM I?
         </h2>
       </div>
-      <div class="col-12 md:col-6 f-14px md:f-12px lg:f-14px xl:f-20px text">
+      <div class="col-12 md:col-6 f-16px md:f-12px lg:f-14px xl:f-20px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the
@@ -94,6 +94,9 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 8px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 12px;
+      }
     }
 
     line-height: 31px;
@@ -102,6 +105,9 @@
     }
     @include media-breakpoint-down(lg) {
       line-height: 16px;
+    }
+    @include media-breakpoint-down(sm) {
+      line-height: unset;
     }
   }
 }

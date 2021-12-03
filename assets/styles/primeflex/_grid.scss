@@ -21,7 +21,19 @@
   padding-left: 0;
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-up(md) {
+  .g-3 {
+    margin-right: -3.5rem;
+    margin-left: -3.5rem;
+  }
+  .g-3 > .col,
+  .g-3 > [class*='col-'] {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
   .g-3 {
     margin-right: -5rem;
     margin-left: -5rem;
@@ -31,19 +43,6 @@
   .g-3 > [class*='col-'] {
     padding-right: 5rem;
     padding-left: 5rem;
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  .g-3 {
-    margin-right: -3.5rem;
-    margin-left: -3.5rem;
-  }
-
-  .g-3 > .col,
-  .g-3 > [class*='col-'] {
-    padding-right: 3.5rem;
-    padding-left: 3.5rem;
   }
 }
 

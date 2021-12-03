@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row md:py-4 lg:py-5">
+    <div class="row my-3 md:py-4 lg:py-5">
       <div
         class="
           md:col-6
@@ -36,12 +36,14 @@
             md:mt-3
             xl:mt-4
           "
-          to="/about-me"
+          to="/books"
         >
-          Learn more
+          My Work
         </NuxtLink>
       </div>
-      <div class="md:col-6 md:text-right order-0 md:order-1 xl:mt-3">
+      <div
+        class="md:col-6 text-center md:text-right order-0 md:order-1 xl:mt-3"
+      >
         <img src="/img/main.png" class="main-img" alt="lokman main picture" />
       </div>
     </div>

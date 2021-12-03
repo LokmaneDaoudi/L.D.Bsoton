@@ -115,6 +115,8 @@ h1 {
   }
   @include media-breakpoint-down(md) {
     font-size: 45px;
+    line-height: 1;
+    letter-spacing: 0;
   }
 }
 .info {
