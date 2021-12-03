@@ -1,6 +1,6 @@
 <template>
-  <div class="container py-4 xl:py-5">
-    <div class="row xl:pt-3">
+  <div class="container py-3">
+    <div class="row">
       <div class="col-12 md:mb-3 xl:mb-5">
         <h1 class="f-alegreya f-bold op-80 m-0">Let's get in touch</h1>
       </div>
@@ -42,8 +42,8 @@
           <p
             class="
               f-alegreya f-14px
-              md:f-20px
-              xl:f-25px
+              md:f-18px
+              xl:f-22px
               op-30
               text-center
               md:text-left
@@ -52,7 +52,7 @@
             Set your mind at rest, we will not spam your inbox
           </p>
 
-          <div class="text-center mt-5">
+          <div class="text-center mt-4">
             <button class="btn btn-primary py-3 px-7">Send</button>
           </div>
         </form>
@@ -62,8 +62,7 @@
           col-12
           md:col-6
           info
-          mt-6
-          md:mt-10
+          mt-7
           p-0
           md:pl-4
           xl:pl-0
@@ -98,11 +97,12 @@
 <style lang="scss" scoped>
 h1 {
   font-size: 45px;
-  @media screen and (min-width: $md) {
+
+  @include media-breakpoint-up(md) {
     font-size: 123px;
     line-height: 0.8;
   }
-  @media screen and (min-width: $xl) {
+  @include media-breakpoint-up(xl) {
     font-size: 170px;
   }
 }
@@ -130,12 +130,12 @@ h1 {
   .input-container {
     font-family: 'AlegreyaSans', Arial, sans-serif;
 
-    font-size: 18px;
-    @media screen and (min-width: $md) {
-      font-size: 20px;
+    font-size: 16px;
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
     }
-    @media screen and (min-width: $xl) {
-      font-size: 25px;
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
     }
 
     label {
@@ -146,12 +146,12 @@ h1 {
 
 textarea {
   min-height: 100px;
-  height: 150px;
-  @media screen and (min-width: $md) {
-    height: 180px;
+  height: 110px;
+  @include media-breakpoint-up(md) {
+    height: 140px;
   }
-  @media screen and (min-width: $xl) {
-    height: 200px;
+  @include media-breakpoint-up(xl) {
+    height: 160px;
   }
 }
 </style>

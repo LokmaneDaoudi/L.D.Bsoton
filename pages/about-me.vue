@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row g-3 py-3 md:pt-4 xl:pt-6 relative">
+    <div class="row g-3 py-3 md:pt-4 relative">
       <div class="col-12 md:col-6 align-self-center">
         <div class="avatar-img box">
           <img src="/img/avatar.jpg" class="box-content px-3 xl:px-5" alt="" />
@@ -11,7 +11,7 @@
           WHO AM I?
         </h2>
       </div>
-      <div class="col-12 md:col-6 md:f-14px xl:f-24px text">
+      <div class="col-12 md:col-6 f-14px md:f-12px xl:f-20px text">
         <p>
           I was born on June 2nd 1999. Before making my debut novel, I got my
           professional Bachelor's degree in mining engineering from the

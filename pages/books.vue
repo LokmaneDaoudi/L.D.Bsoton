@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-4 xl:py-5">
+  <div class="container py-4">
     <div class="flex flex-column mx-auto" style="max-width: 1327px">
       <div class="flex book" v-for="book in books" :key="book.title">
         <div
@@ -143,32 +143,6 @@ let books = [
       down by a small army of genetically-modified soldiers: a project
       that was thought to be dropped by Professor Semyonovich, but was
       continued in secret without Scott's knowledge.
-      <br /><br />
-      Following this revelation, Scott is ultimately forced to flee his
-      home and leave any hope of a bright future. Although, during his
-      attempt to escape, he is chased and abducted by his physically
-      superior pursuers. Fortunately for him, however, a group of
-      mysterious people rescue him, and later reveal themselves as
-      time-travellers from 27 years in the future.
-      <br /><br />
-      Dr Scott, who is pained by his mistakes, has no choice but to
-      follow them on a one-chance mission to undo his misdeeds, with the
-      hope of preventing a dystopian future. Together, they travel back
-      in time to where it all began: Moscow in 1988.
-    `,
-  },
-  {
-    title: 'The Terminator',
-    sub_title: 'Nice ?',
-    sub_title_aside: 'Lmao okay',
-    cover: '/img/books/terminator.jpg',
-    link_excerpt: 'https://www.terminator.com/except',
-    body: `
-      A hard-working scientist and soon-to-be father, Dr Jevise Scott
-      regrettably decides to steal the research papers of his
-      supervising professor, Theodore Semyonovich, in order to invent
-      time-travel and attain worldwide renown like that of chronicled
-      scientists, such as Albert Einstein and Sir Isaac Newton.
       <br /><br />
       Following this revelation, Scott is ultimately forced to flee his
       home and leave any hope of a bright future. Although, during his
