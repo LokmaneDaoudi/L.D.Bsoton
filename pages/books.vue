@@ -126,7 +126,7 @@ let books = [
     sub_title_aside: 'Chase Your Mistakes',
     link_amazon: 'https://www.test.com/amazon',
     link_excerpt: 'https://www.test.com/except',
-    cover: '/img/books/the-Juncture.png',
+    cover: '/img/books/Juncture.jpg',
     body: `
       A hard-working scientist and soon-to-be father, Dr Jevise Scott
       regrettably decides to steal the research papers of his
