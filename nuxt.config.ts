@@ -15,4 +15,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  meta: {
+    title: 'L.D. Boston',
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
+  },
 });
