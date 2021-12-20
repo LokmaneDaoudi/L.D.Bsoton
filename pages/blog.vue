@@ -5,19 +5,21 @@
     </div>
     <div v-else-if="error">error ! {{ error }}</div>
     <div v-else class="posts-container">
-      <div v-for="post in posts" class="post">
-        <img :src="post.metadata.image.imgix_url" alt="" />
-        <div class="content">
-          <div class="f-17px f-bold">{{ post.title }}</div>
-          <div class="f-14px">{{ post.metadata.description }}</div>
-        </div>
-      </div>
+      <template v-for="post in posts">
+        <NuxtLink :to="`/post/${post.slug}`" class="post">
+          <img :src="post.metadata.image.imgix_url" alt="" />
+          <div class="content p-3 pb-4">
+            <div class="f-26px f-bold f-alegreya-sans">{{ post.title }}</div>
+            <div class="f-14px mt-2">{{ post.metadata.description }}</div>
+          </div>
+        </NuxtLink>
+      </template>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-const { data, pending, error } = await useFetch('/api/blog');
+const { data, pending, error } = await useFetch('/api/posts');
 
 const posts: any = data.value.objects;
 
@@ -37,6 +39,7 @@ useMeta({
 }
 
 .post {
+  display: block;
   break-inside: avoid;
   border-radius: 10px;
   overflow: hidden;
@@ -50,7 +53,6 @@ useMeta({
   }
 
   .content {
-    padding: 1rem 0.8rem;
   }
 }
 </style>
