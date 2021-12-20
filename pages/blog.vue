@@ -33,7 +33,7 @@ useMeta({
 
 <style lang="scss" scoped>
 .posts-container {
-  columns: 4 200px;
+  columns: 3 200px;
 }
 
 .post {
