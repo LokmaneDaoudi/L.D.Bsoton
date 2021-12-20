@@ -131,7 +131,9 @@ function setLinksHighlight() {
       .getBoundingClientRect();
     let activeLinkBox = document
       .querySelector('header .links a.router-link-active')
-      .getBoundingClientRect();
+      ?.getBoundingClientRect();
+
+    if (!activeLinkBox) return;
 
     let left = activeLinkBox.left - linksBox.left;
     let width = activeLinkBox.width;

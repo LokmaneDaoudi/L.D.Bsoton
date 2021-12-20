@@ -22,11 +22,11 @@ main {
 }
 
 a {
-  color: #0d6efd;
+  color: unset;
   text-decoration: none;
 
   &:hover {
-    color: darken(#0d6efd, 20);
+    color: unset;
   }
 }
 a:not([href]):not([class]) {
