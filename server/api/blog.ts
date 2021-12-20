@@ -1,13 +1,10 @@
 import type { IncomingMessage, ServerResponse } from 'http';
 import Cosmic from 'cosmicjs';
 
-const cosmic_slug = '0e19b0b0-5ebc-11ec-a285-a5b8b9db1838';
-const cosmic_read_key = 'dO2tokTdgWaXWggZDaupTLyKE80LXkeC2LjRAJByN62PLBbPvg';
-
 const api = Cosmic();
 const bucket = api.bucket({
-  slug: cosmic_slug,
-  read_key: cosmic_read_key,
+  slug: process.env.COSMIC_SLUG,
+  read_key: process.env.COSMIC_READ_KEY,
 });
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
