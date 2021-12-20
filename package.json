@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest",
-    "sass": "^1.43.2"
+    "nuxt3": "3.0.0-27234503.d5127e9",
+    "sass": "^1.45.0"
   },
   "dependencies": {
     "cosmicjs": "^4.1.2"
